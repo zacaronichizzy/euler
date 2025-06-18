@@ -7,8 +7,3 @@ for line in f:
     row = [int(x) for x in l]
     triangle.append(row)
 print(triangle)
-
-with open('files/0067_triangle.txt', 'r') as file:
-    f = file.readlines()
-for line in f:
-    print(line)
