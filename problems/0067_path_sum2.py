@@ -6,4 +6,12 @@ for line in f:
     l = line.strip().split()
     row = [int(x) for x in l]
     triangle.append(row)
-print(triangle)
+
+N = len(triangle)
+for i in range(N-2, -1, -1):
+    n = len(triangle[i])
+    for j in range(n):
+        triangle[i][j] += max(triangle[i+1][j:j+2])
+    print(triangle[i])
+print("done")
+
